@@ -22,6 +22,21 @@ function applemedia_theme_support() {
 
 add_action('after_setup_theme', 'applemedia_theme_support');
 
+
+// Change currency symbol to AED
+
+function wc_change_uae_currency_symbol( $currency_symbol, $currency ) {
+    switch ( $currency ) {
+        case 'AED':
+            $currency_symbol = 'AED';
+        break;
+    }
+
+    return $currency_symbol;
+}
+
+add_filter( 'woocommerce_currency_symbol', 'wc_change_uae_currency_symbol', 10, 2 );
+
 // Add Styles and Scripts
 
 function applemedia_styles_scripts() {

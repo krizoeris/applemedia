@@ -24,3 +24,8 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+button[type=submit]:hover,input[type=submit],.button.product_type_simple{
+    color: $color-secondary;
+    background: $color-primary;
+}
