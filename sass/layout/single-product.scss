@@ -1,0 +1,94 @@
+.woocommerce div.product {
+    display: flex;
+    flex-wrap: wrap;
+
+    .woocommerce-product-gallery {
+        flex-grow: 1;
+    }
+
+    .summary {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        padding-left: 40px !important;
+
+        h1 {
+            order: 1;
+            font-weight: 500;
+            font-family: $font-poppins;
+            font-size: 45px;
+            color: $color-primary;
+            letter-spacing: 2px;
+        }
+
+        .price {
+            order: 2;
+            font-weight: 300;
+            font-family: $font-poppins;
+            font-size: 30px;
+            color: $color-primary;
+            letter-spacing: 5px;
+        }
+
+        .cart {
+            display: flex;
+            flex-direction: column;
+            order: 3;
+
+            .quantity {
+
+                input[type=number] {
+                    margin: 20px 0;
+                    padding: 15px;
+                    font-size: 20px;
+
+                }
+            }
+
+            button[type=submit] {
+                width: 280px;
+                padding: 15px;
+                font-size: 15px;
+                font-weight: 300;
+                color: $color-primary;
+                letter-spacing: 10px;
+                border: solid 1px $color-primary;
+                border-radius: 0;
+                background: transparent;
+                text-transform: uppercase;
+            }
+        }
+
+        * {
+            order: 4;
+        }
+
+        h2 {
+            display: none;
+        }
+
+        .product-meta {
+            display: none !important;
+        }
+    }
+
+    .related {
+        flex-grow: 2;
+        display: flex;
+        padding-top: 80px;
+
+        h2 {
+            flex-grow: 1;
+            font-weight: 500;
+            font-family: $font-poppins;
+            font-size: 35px;
+            color: $color-primary;
+            letter-spacing: 2px;
+            padding-top: 90px;
+        }
+
+        ul {
+            flex-grow: 1;
+        }
+    } 
+}

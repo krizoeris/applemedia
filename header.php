@@ -7,7 +7,7 @@
     <title>Document</title>
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 <header id="headerRow">
         <div class="header-row" >
             <div class="brand-logo">

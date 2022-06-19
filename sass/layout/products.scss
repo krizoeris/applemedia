@@ -1,0 +1,40 @@
+.woo-header {
+    background: $color-navbar-bg;
+    height: 83px;
+    margin-bottom: 100px;
+}
+
+.woo-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    
+    .woo-container-inner {
+
+    }
+}
+
+.woocommerce-loop-product__title {
+    font-family: $font-poppins;
+    font-size: 25px !important;
+    color: $color-primary;
+    text-align: center;
+    text-decoration: none;
+}
+
+.woocommerce ul.products li.product .price {
+    display: none;
+}
+
+.button.product_type_simple {
+    width: 100%;
+    border: solid 1px #000 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    font-family: $font-poppins !important;
+    font-size: 18px !important;
+    font-weight: 300 !important;
+    letter-spacing: 5px;
+    color: $color-primary !important;
+    text-align: center;
+    text-transform: uppercase !important;
+}

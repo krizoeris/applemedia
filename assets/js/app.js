@@ -56,7 +56,7 @@ t1.from('.social-links li', {
 }, "-=0.5")
 
 window.onload = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 83) {
         document.getElementById("headerRow").style.background = "linear-gradient(90deg, rgba(223,73,196,1) 0%, rgba(57,30,147,1) 100%)";
     } else {
         document.getElementById("headerRow").style.background = "transparent";
@@ -64,7 +64,7 @@ window.onload = () => {
 }
 
 window.onscroll = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 83) {
         document.getElementById("headerRow").style.background = "linear-gradient(90deg, rgba(223,73,196,1) 0%, rgba(57,30,147,1) 100%)";
     } else {
         document.getElementById("headerRow").style.background = "transparent";

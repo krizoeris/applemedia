@@ -8,6 +8,16 @@ function applemedia_theme_support() {
         'footer' => __('Footer Menu')
     ));
 
+    // Add Woocommerce
+    add_theme_support( 'woocommerce' );
+
+    // Remove Shopt Title
+    add_filter('woocommerce_show_page_title', '__return_false');
+
+    // Add Woocommerce Support
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
 }
 
 add_action('after_setup_theme', 'applemedia_theme_support');
@@ -26,3 +36,11 @@ function applemedia_styles_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'applemedia_styles_scripts');
+
+function woocommerce_template_product_description() {
+    woocommerce_get_template('single-product/tabs/description.php');
+}
+
+add_action('woocommerce_single_product_summary', 'woocommerce_template_product_description', 20);
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
