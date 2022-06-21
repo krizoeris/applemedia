@@ -149,20 +149,25 @@ header {
 
 
 
-@media screen and (max-width: $mobile-breakpoint) {
+@media screen and (max-width: 767px) {
     .header-row, .header-nav-footer {
-        padding: 30px;
+        padding: 30px !important;
+    }
+    
+    header .header-row .brand-logo a {
+        font-size: 1em;
+        letter-spacing: 10px;
     }
 
     .fullpage-menu-inner {
-        padding: 70px 30px;
+        padding: 70px 30px !important;
     }
 
     nav li a {
-        font-size: 54px;
+        font-size: 54px !important;
     }
 
     .social-links li {
-        font-size: 16px;
+        font-size: 16px !important;
     }
 }

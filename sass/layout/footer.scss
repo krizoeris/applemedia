@@ -19,13 +19,13 @@
 
             .form-inline {
                 input[type=email] {
-                    width: 500px;
+                    width: 350px;
                     border: solid 1px;
                     font-family: $font_poppins;
                     font-weight: 300;
                     font-size: 15px;
                     letter-spacing: 3px;
-                    padding: 15px;
+                    padding: 10px;
                     margin: 0;
                 }
 
@@ -37,7 +37,7 @@
                     border: solid 1px;
                     background-color: transparent;
                     color: $color-primary;
-                    padding: 15px;
+                    padding: 10px;
                     text-decoration: none;
                     margin: 0;
                     cursor: pointer;
@@ -106,5 +106,112 @@
 
     span {
         color: $color-primary;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .social-footer {
+    
+        .social-footer-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            .subscription-form {
+                margin-bottom: 20px;
+    
+                p {
+                    font-size: 20px;
+                    margin-bottom: 18px;
+                    text-align: center;
+                }
+    
+                .form-inline {
+                    flex-direction: column;
+                    input[type=email] {
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
+
+                    button[type=submit] {
+                        width: 100%;
+                    }
+                }
+    
+            }
+            .social-product-links {
+                .social-links {
+                    text-align: center;
+                    padding-bottom: 20px;
+                    
+                    span {
+                        margin-left: 25px;
+                    }
+                }
+    
+                .products-links {
+                    ul {
+                        flex-direction: column;
+                        align-items: center;
+                    
+                        li {
+                            font-size: 15px;
+                            font-weight: 300;
+                            color: $color-primary;
+                        }
+                    
+                        li + li {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .footer-row {
+        margin: 0 auto;
+        .footer-inner {
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
+            padding: 10px 0;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .social-footer {
+    
+        .social-footer-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            .subscription-form {
+                margin-bottom: 20px;
+    
+                p {
+                    font-size: 20px;
+                    margin-bottom: 18px;
+                    text-align: center;
+                }
+    
+                .form-inline {
+                    input[type=email] {
+                        width: 350px;
+                        font-size: 15px;
+                    }
+                }
+    
+            }
+            .social-product-links {
+                .social-links {
+                    text-align: center;
+                    padding-bottom: 20px;
+                }
+            }
+        }
     }
 }
