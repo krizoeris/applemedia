@@ -38,3 +38,16 @@
     text-align: center;
     text-transform: uppercase !important;
 }
+
+@media screen and (max-width: 1100px) {
+    .button.product_type_simple {
+        font-size: 12px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .woocommerce-loop-product__title { 
+        font-size: 20px !important;
+    }
+}

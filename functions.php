@@ -59,3 +59,11 @@ function woocommerce_template_product_description() {
 add_action('woocommerce_single_product_summary', 'woocommerce_template_product_description', 20);
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
+
+function bbloomer_custom_get_availability_text( $availability, $product ) {
+   $stock = $product->get_stock_quantity();
+   if ( $product->is_in_stock() && $product->managing_stock() ) $availability = '<span class="qty-stock">QTY</span>: ' . $stock;
+   return $availability;
+}
+
+add_filter( 'woocommerce_get_availability_text', 'bbloomer_custom_get_availability_text', 99, 2 );

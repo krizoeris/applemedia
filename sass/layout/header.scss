@@ -148,10 +148,20 @@ header {
 }
 
 
+@media screen and (max-width: 1100px) {
+    .header-row, .header-nav-footer {
+        padding: 30px !important;
+    }
+    
+    .fullpage-menu-inner {
+        padding: 70px 30px !important;
+    }
+}
+
 
 @media screen and (max-width: 767px) {
     .header-row, .header-nav-footer {
-        padding: 30px !important;
+        padding: 10px !important;
     }
     
     header .header-row .brand-logo a {
@@ -160,7 +170,7 @@ header {
     }
 
     .fullpage-menu-inner {
-        padding: 70px 30px !important;
+        padding: 70px 10px !important;
     }
 
     nav li a {
@@ -169,5 +179,9 @@ header {
 
     .social-links li {
         font-size: 16px !important;
+    }
+
+    .social-links li:last-child {
+        display: none;
     }
 }

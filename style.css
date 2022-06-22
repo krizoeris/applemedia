@@ -184,22 +184,33 @@ header .header-row .menu-toggle .hamburger path {
   text-decoration: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1100px) {
   .header-row, .header-nav-footer {
     padding: 30px !important;
+  }
+  .fullpage-menu-inner {
+    padding: 70px 30px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-row, .header-nav-footer {
+    padding: 10px !important;
   }
   header .header-row .brand-logo a {
     font-size: 1em;
     letter-spacing: 10px;
   }
   .fullpage-menu-inner {
-    padding: 70px 30px !important;
+    padding: 70px 10px !important;
   }
   nav li a {
     font-size: 54px !important;
   }
   .social-links li {
     font-size: 16px !important;
+  }
+  .social-links li:last-child {
+    display: none;
   }
 }
 .woo-header {
@@ -238,6 +249,16 @@ header .header-row .menu-toggle .hamburger path {
   text-transform: uppercase !important;
 }
 
+@media screen and (max-width: 1100px) {
+  .button.product_type_simple {
+    font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .woocommerce-loop-product__title {
+    font-size: 20px !important;
+  }
+}
 .woocommerce div.product {
   display: flex;
   flex-wrap: wrap;
@@ -253,7 +274,7 @@ header .header-row .menu-toggle .hamburger path {
 }
 .woocommerce div.product .summary h1 {
   order: 1;
-  font-weight: 500;
+  font-weight: 600;
   font-family: "Poppins", "Arial";
   font-size: 45px;
   color: #000000;
@@ -265,12 +286,27 @@ header .header-row .menu-toggle .hamburger path {
   font-family: "Poppins", "Arial";
   font-size: 30px;
   color: #000000;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
+  display: flex;
+}
+.woocommerce div.product .summary .price .woocommerce-Price-currencySymbol {
+  font-weight: 500;
+}
+.woocommerce div.product .summary .stock.in-stock {
+  order: 3;
+  font-weight: 300;
+  font-family: "Poppins", "Arial";
+  font-size: 20px;
+  color: #000000;
+  padding: 10px 0;
+}
+.woocommerce div.product .summary .stock.in-stock span.qty-stock {
+  font-weight: 900 !important;
 }
 .woocommerce div.product .summary .cart {
   display: flex;
   flex-direction: column;
-  order: 3;
+  order: 4;
 }
 .woocommerce div.product .summary .cart .quantity input[type=number] {
   margin: 20px 0;
@@ -290,7 +326,7 @@ header .header-row .menu-toggle .hamburger path {
   text-transform: uppercase;
 }
 .woocommerce div.product .summary * {
-  order: 4;
+  order: 5;
 }
 .woocommerce div.product .summary h2 {
   display: none;

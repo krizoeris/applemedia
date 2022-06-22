@@ -14,7 +14,7 @@
 
         h1 {
             order: 1;
-            font-weight: 500;
+            font-weight: 600;
             font-family: $font-poppins;
             font-size: 45px;
             color: $color-primary;
@@ -27,13 +27,31 @@
             font-family: $font-poppins;
             font-size: 30px;
             color: $color-primary;
-            letter-spacing: 5px;
+            letter-spacing: 2px;
+            display: flex;
+
+            .woocommerce-Price-currencySymbol {
+                font-weight: 500;
+            }
+        }
+
+        .stock.in-stock {
+            order: 3;
+            font-weight: 300;
+            font-family: $font-poppins;
+            font-size: 20px;
+            color: $color-primary;
+            padding: 10px 0;
+
+            span.qty-stock {
+                font-weight: 900 !important;
+            }
         }
 
         .cart {
             display: flex;
             flex-direction: column;
-            order: 3;
+            order: 4;
 
             .quantity {
 
@@ -60,7 +78,7 @@
         }
 
         * {
-            order: 4;
+            order: 5;
         }
 
         h2 {
